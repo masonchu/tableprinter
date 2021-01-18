@@ -260,7 +260,7 @@ func extractCells(pos int, header StructHeader, v reflect.Value, whenStructTagsO
 
 			s = fmt.Sprintf("%d", vi)
 		case reflect.Float32, reflect.Float64:
-			s = fmt.Sprintf("%.2f", vi)
+			s = fmt.Sprintf("%.6f", vi)
 			rightCells = append(rightCells, pos)
 		case reflect.Bool:
 			if vi.(bool) {
